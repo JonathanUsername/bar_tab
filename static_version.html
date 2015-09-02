@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='style.css' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="ko.min.js"></script>
+		<script src="bar_tab.js"></script>
+	</head>
+	<body>
+		<div class="bar_tabber">
+		    <h2>The Guardian</h2>
+		    <div class="nav">
+		        <div class="tab" id="tab_{{id}}" data-bind="click: select, text: name, css: { selected: is_selected }">Football</div>     
+		        <div class="tab selected" id="tab_{{id}}" data-bind="click: select, text: name, css: { selected: is_selected }">Travel</div>     
+		        <div class="tab" id="tab_{{id}}" data-bind="click: select, text: name, css: { selected: is_selected }">UK news</div>          
+		    </div>
+		    <div class="articles">
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">1</p>
+		                <img data-bind="attr: { src: img }" src="http://media.guim.co.uk/b39a22dae40cb279a940a4e786a473d659b05883/0_322_5244_3145/140.jpg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/sep/02/short-trips-from-new-york-city-send-us-your-travel-tips">
+		                    <h3 data-bind="text: title">Short trips from New York City: send us your travel tips</h3>
+		                </a>
+		                <p data-bind="html: text">We want to hear about the best places to visit within reach of NYC, including walks, restaurant and beaches, plus places to stay for an overnight break. Share your tips and you could win a £200 hotel voucher</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">2</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/8/28/1440753755935/78f3d945-a6cb-4cc3-b7ac-6777d715cedb-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/sep/02/top-10-caves-a-manger-paris-france">
+		                    <h3 data-bind="text: title">Top 10 caves à manger in Paris</h3>
+		                </a>
+		                <p data-bind="html: text">Paris is offering a fresh twist on the wine bar experience with the increasing popularity of its <em>caves à manger</em>, where you can savour impressive wines, provided you also sample something from their deli-style food menus</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">3</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/9/1/1441111315712/5dba8e00-0a44-46e8-b369-107f81f3ecf2-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/sep/01/take-the-kids-to-longleat-wiltshire-family-day-trips">
+		                    <h3 data-bind="text: title">Take the kids to … Longleat, Wiltshire</h3>
+		                </a>
+		                <p data-bind="html: text">Longleat, with its safari and adventure park, has a roar appeal for families, allowing kids to get up close to all sorts of smaller animals. But with so much to do make sure you plan your visit to cram it all in</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">4</p>
+		                <img data-bind="attr: { src: img }" src="http://media.guim.co.uk/2dd3483f2abc032f93551f6f5759df330ee26266/0_173_5184_3110/140.jpg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/sep/01/first-time-skiing-in-falls-creek-what-joy-to-hand-back-my-skis-with-bones-intact">
+		                    <h3 data-bind="text: title">First-time skiing in Falls Creek: 'What joy to hand back my skis with bones intact'</h3>
+		                </a>
+		                <p data-bind="html: text">After years of no interest in skiing, Brigid Delaney dons ‘ugly, puffy clothes’ and ‘plastic corset’ ski boots and takes to the slopes</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">5</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/8/28/1440757486153/203576581_2cafa0e82a_o-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/29/romania-road-trip-maramures-breb-east-europe">
+		                    <h3 data-bind="text: title">The great east European road trip part four: Romania</h3>
+		                </a>
+		                <p data-bind="html: text">Romania’s Maramures region may be modernising in places but take a walk in the countryside among forests, wooden churches and hay stooks and you’ll feel like you’ve stepped back in time </p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">6</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/8/28/1440759787454/0ad9be52-3e06-4a27-8334-e7803bbf8771-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/29/yha-boggle-hole-fylingthorpe-whitby-yorkshire-hostel-review">
+		                    <h3 data-bind="text: title">YHA Boggle Hole, Fylingthorpe, Whitby, North Yorkshire: hostel review</h3>
+		                </a>
+		                <p data-bind="html: text">YHA hostels have reinvented themselves – and changed almost as much as our writer has in the 20 years since she last stayed in one</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">7</p>
+		                <img data-bind="attr: { src: img }" src="http://media.guim.co.uk/7f63ce733b34ac0d818df1a7ce45903fea31df1e/463_125_841_504/140.jpg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/28/my-escape-from-north-korea-im-free-to-travel-at-last">
+		                    <h3 data-bind="text: title">My escape from North Korea: ‘I’m free to travel at last’</h3>
+		                </a>
+		                <p data-bind="html: text">Activist and author Hyeonseo Lee escaped North Korea in 1997 and, after living in China, settled in South Korea, where she’s found happiness – at a price</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">8</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/8/28/1440760393541/987d2b12-2686-497c-b9a8-19e29a6cf83a-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/28/best-august-bank-holiday-summer-travel-ideas">
+		                    <h3 data-bind="text: title">Day trips and diversions: the best August bank holiday travel ideas</h3>
+		                </a>
+		                <p data-bind="html: text">Ready for the summer bank holiday? If you’re still looking for ideas, we’ve picked day trips, walks, seaside breaks and attractions that cater for all the family</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">9</p>
+		                <img data-bind="attr: { src: img }" src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/8/27/1440699474962/e51f6365-31cd-4e4e-a01a-a6cfb811e321-140x84.jpeg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/28/whats-new-in-new-orleans-the-citys-post-katrina-highlights">
+		                    <h3 data-bind="text: title">What’s new in New Orleans? The city’s post-Katrina highlights</h3>
+		                </a>
+		                <p data-bind="html: text">Nola is back and buzzing with new bars, hotels, restaurants and markets that showcase its history as well as its bright future. Here, with the help of locals, we pick fresh places to experience this grand city’s charm</p>
+		            </div>
+		        </div>     
+		        <div class="article">
+		            <div class="image">
+		                <p class="number" data-bind="text: index">10</p>
+		                <img data-bind="attr: { src: img }" src="http://media.guim.co.uk/cdac8697e81e3c2db03287dbb35bd004858121bc/0_96_2117_1271/140.jpg">
+		            </div>
+		            <div class="body">
+		                <a data-bind="attr: { href: url }" href="http://www.theguardian.com/travel/2015/aug/27/seaworld-harry-styles-negative-online-comments">
+		                    <h3 data-bind="text: title">SeaWorld criticism surges online after Harry Styles speaks out, analysts report</h3>
+		                </a>
+		                <p data-bind="html: text">Credit Suisse warned whale theme park of ‘brand impairment issues’ caused by One Direction singer and employees caught infiltrating animal rights groups</p>
+		            </div>
+		        </div>          
+		        <p class="loading" data-bind="if: loading"></p>
+		        <noscript>Please turn on Javascript</noscript>
+		    </div>
+		</div>
+	</body>
+</html>

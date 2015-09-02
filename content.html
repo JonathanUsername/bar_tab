@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+		<link href='style.css' rel='stylesheet' type='text/css'>
+		<script src="secrets.private.json"></script>
+		<script src="jquery.min.js"></script>
+		<script src="ko.min.js"></script>
+		<script src="bar_tab.js"></script>
+	</head>
+	<body>
+		<div class="bar_tabber">
+			<h2>The Guardian</h2>
+			<div class="nav">
+				<!-- ko foreach: tabs -->
+				  	<!-- ko template: { name: "tab-template" } --><!-- /ko -->
+				<!-- /ko -->
+			</div>
+			<div class="articles">
+				<!-- ko foreach: articles -->
+				  	<!-- ko template: { name: "article-template" } --><!-- /ko -->
+				<!-- /ko -->
+				<p class="loading" data-bind="if: loading">Loading articles...</p>
+				<noscript>Please turn on Javascript</noscript>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/html" id="article-template">
+  <div class="article">
+  	<div class="image">
+	  	<p class="number" data-bind="text: index"></p>
+	  	<img data-bind="attr: { src: img }">
+	</div>
+    <div class="body">
+	    <a data-bind="attr: { href: url }">
+		    <h3 data-bind="text: title"></h3>
+	    </a>
+	    <p data-bind="html: text"></p>
+    </div>
+  </div>
+</script>
+
+<script type="text/html" id="tab-template">
+	<div class="tab" id="tab_{{id}}" data-bind="click: select, text: name, css: { selected: is_selected }"></div>
+</script>
